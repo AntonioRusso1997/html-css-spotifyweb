@@ -4,16 +4,21 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .wrapper {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
 /* Common */
-.clearfix {
+
+.clearfix::after {
     content: "";
-    display: table;
     clear: both;
+    display: table;
 }
 
 .sidebar,
@@ -24,22 +29,32 @@
 
 /* Main */
 
+
 main {
     height: calc(100% - 100px);
     width: 100%;
+    overflow-y: hidden;
 }
 /* Menu laterale */
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     width: 250px;
     height: 100%;
+    min-height: 480px;
     background-color: black;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: #a3a3a3;
+}
+
+@media screen and (max-width: 600px) {
+    main .sidebar {
+        width: 50px;
+    }
+
+    main .main-content {
+        width: calc(100% - 50px);
+    }
+
 }
 
 .sidebar h3 {
@@ -69,7 +84,7 @@ main {
 .option img {
     height: 30px;
     margin-right: 5px;
-    filter: contrast(20%);
+    filter: contrast(30%);
 }
 
 .active {
@@ -85,15 +100,28 @@ main {
     border-left: 3px solid #adff2f;
 }
 
-.all-playlist {
-    width: 100%;
-}
-
-.list {
+.side-top {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
-    overflow-y: auto;
+    height: calc(100% - 90px);
+}
+
+.playlist-create:hover,
+.list .playlist-name:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.playlist-create:hover .plus {
+    background-color: white;
+}
+
+.all-playlist {
+    width: 100%;
+    overflow-y: hidden;
 }
 
 .playlist-create {
@@ -104,24 +132,72 @@ main {
 }
 
 .playlist-create .plus {
+    display: inline-block;
     color: black;
+    text-align: center;
+    vertical-align: middle;
     font-size: 22px;
     font-weight: 900;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     background-color: #a3a3a3;
-    padding: 10px 12px;
     margin-right: 5px;
 }
 
+.list {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
 .playlist-name {
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px;
 }
 
 .menage {
-    justify-self: flex-end;
-    width: 100%;
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: 90px;
+    margin: 0 10px;
 }
+
+.menage-option {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.menage-option:first-child img {
+    height: 25px;
+    filter: contrast(30%);
+    margin-right: 5px;
+}
+
+.menage-option:last-child img {
+    height: 30px;
+    background-color: gray;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.menage-option:last-child p {
+    color: white;
+}
+
+.menage-option:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.menage-option:first-child:hover img {
+    filter: none;
+}
+
 
 /* /Menu laterale */
 
