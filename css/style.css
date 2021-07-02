@@ -160,9 +160,9 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     height: 90px;
-    margin: 0 10px;
+    padding: 0 20px;
 }
 
 .menage-option {
@@ -180,7 +180,7 @@ main {
 
 .menage-option:last-child img {
     height: 30px;
-    background-color: gray;
+    background-color: #a3a3a3;
     border-radius: 50%;
     margin-right: 5px;
 }
@@ -216,6 +216,181 @@ footer {
     height: 100px;
     background-color: #282828;
 }
+
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;    
+}
+
+.footer-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.footer-right {
+    display: flex;
+    justify-self: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+    width: 250px;
+    height: 100%;
+}
+
+.footer-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 100%;
+}
+
+.footer-song {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    color: #a3a3a3;
+}
+
+.song-info h3 {
+    font-size: 16px;
+    color: white;
+}
+
+.song-info p {
+    font-size: 14px;
+}
+
+.footer-song img {
+    height: 50%;
+    margin-right: 10px;
+}
+
+.left-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-icons i {
+    font-size: 20px;
+    margin: 0 5px;
+    color: #a3a3a3;
+}
+
+.left-icons i:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/* -------- */
+
+.player {
+    display: flex;
+    text-align: center;
+    color: white;
+    align-items: center;
+}
+
+.player i {
+    font-size: 16px;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+.player .play {
+    font-size: 35px;
+}
+
+.player .play:hover {
+    transform: scale(1.1);
+}
+
+.progression {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.progression .time {
+    color: white;
+    margin: 0px 10px;
+    font-size: 10px;
+}
+
+.footer-player .bar {
+    height: 5px;
+    width: 80%;
+    min-width: 150px;
+    background-color: #c1c1c1;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.loaded {
+    width: 20%;
+    position: absolute;
+    left: 0;
+    height: 5px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.bar:hover .loaded {
+    background-color: limegreen;
+}
+
+.circle {
+    display: none;
+    position: absolute;
+    left: 18%;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transform: translate(0%, -50%);
+    background-color: white;
+}
+
+.bar:hover .circle {
+    display: block;
+}
+
+
+.footer-right i {
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+}
+.footer-right .progression {
+    display: flex;
+    width: 150px;
+    margin-top: 0px;
+    min-width: 100px;
+}
+
+.footer-right .bar {
+    position: relative;
+    width: 80%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #c1c1c1;
+    cursor: pointer;
+}
+
+
 /* / Footer */
 
 /* Debug */
@@ -253,5 +428,21 @@ footer {
 
 .debug .wrapper footer {
     background-color: lightcoral;
+}
+
+.debug .main-footer {
+    background-color: thistle;
+}
+
+.debug .footer-left {
+    background-color: turquoise;
+}
+
+.debug .footer-player {
+    background-color: yellowgreen;
+}
+
+.debug .footer-right {
+    background-color: lightskyblue;
 }
 /* / Debug */
