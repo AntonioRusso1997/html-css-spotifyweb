@@ -286,6 +286,23 @@ main {
     background-color:#141922;
 }
 
+.main-wrap::-webkit-scrollbar-track {
+    border: 1px solid #000;
+    padding: 2px 0;
+    background-color: #404040;
+  }
+  
+  .main-wrap::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .main-wrap::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #a3a3a3;
+    border: 1px solid #000;
+  }
+
 .toolbar {
     display: flex;
     justify-content: flex-start;
