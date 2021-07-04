@@ -288,9 +288,9 @@ main {
 
 .toolbar {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 50%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 60%;
     margin: 10px auto;
 }
 
@@ -304,6 +304,7 @@ main {
     color: #a3a3a3;
     font-size: 18px;
     font-weight: 600;
+    margin: 20px;
 }
 
 .greenbottom {
@@ -360,6 +361,7 @@ main {
 }
 
 .song {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -387,6 +389,29 @@ main {
 
 .artist img {
     border-radius: 50%;
+}
+
+#play-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 60px;
+    color: white;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    vertical-align: middle;
+    display: none;
+}
+
+.artist #play-button {
+    border-radius: 50%;
+}
+
+.song:hover #play-button {
+    display: block;
 }
 
 
@@ -452,9 +477,21 @@ footer {
     font-size: 14px;
 }
 
-.footer-song img {
-    height: 50%;
+.song-info p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
+}
+
+.act-song {
+    position: relative;
+    height: 50px;
+    width: 50px;
     margin-right: 10px;
+}
+
+.act-song img {
+    height: 100%;
 }
 
 .left-icons {
@@ -478,6 +515,27 @@ footer {
     font-weight: 900;
 }
 
+#pause-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    display: none;
+}
+
+
+
+.act-song:hover #pause-button {
+    display:block;
+    cursor: pointer;
+}
 /* -------- */
 
 .player {
@@ -555,6 +613,7 @@ footer {
     display: block;
 }
 
+/* ------- */
 
 .footer-right i {
     color: white;
@@ -579,6 +638,51 @@ footer {
 
 /* / Footer */
 
+/* Media Query */
+@media screen and (max-width: 700px) {
+    main .sidebar {
+        width: 50px;
+    }
+
+    main .main-content {
+        width: calc(100% - 50px);
+    }
+
+    .side-active {
+        border-left: none;
+    }
+
+    #logo, 
+    .option p,
+    .side-top h3,
+    .playlist-create,
+    .all-playlist,
+    .menage p,
+    .menage hr {
+        display: none;
+    }
+
+    .option {
+        display: inline-block;
+        padding: 5px 0;
+    }
+
+    .menu-side {
+        align-items: center;
+        position: absolute;
+        top: 40px;
+    }
+
+    #logo-small {
+        display: inline-block;
+    }
+    
+    .menage {
+        align-items: center;
+    }
+
+}
+/* / Media Query */
 /* Debug */
 .debug .wrapper {
     background-color: lightblue;
