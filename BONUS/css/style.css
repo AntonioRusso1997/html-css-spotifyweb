@@ -234,9 +234,9 @@ main {
     border: 2px solid white;
     border-radius: 30px;
     margin: 0 20px;
-    animation:Sfondo-btn 2s alternate infinite;
+    /* animation:Sfondo-btn 2s alternate infinite; */
 }
-
+/* 
 @keyframes Sfondo-btn {
 	0% {
 		background-color: #32CD32;
@@ -248,23 +248,40 @@ main {
 	100% {
 		background-color: #32CD32;
 	}
-}
+} */
 
-#upgrade-btn:hover {
-    transform: scale(1.1);
-    animation:jump 1s ease 0s infinite normal;
+#upgrade-btn {
+    animation:jump-and-bg 2s ease 0s infinite normal;
     background-color:#32CD32;
     
 }
 
-@keyframes jump {
-    0%{ transform:translateY(0); }
-    20%{ transform:translateY(0); }
-    40%{ transform:translateY(-20px); }
-    50%{ transform:translateY(0); }
-    60%{ transform:translateY(-10px); }
-    80%{ transform:translateY(0); }
-    100%{ transform:translateY(0); }
+@keyframes jump-and-bg {
+    0% { 
+        transform:translateY(0);
+        background-color: #32CD32; 
+    }
+    20% { 
+        transform:translateY(0); 
+    }
+    40% {
+         transform:translateY(-20px); 
+        }
+    50% {
+         transform:translateY(0); 
+         background-color: #96ff33;
+         color: black;
+        }
+    60% {
+         transform:translateY(-10px); 
+        }
+    80% {
+         transform:translateY(0); 
+        }
+    100% {
+         transform:translateY(0);
+         background-color: #32CD32; 
+        }
     }
 /* / Barr Upgrade */
 
@@ -500,6 +517,7 @@ footer {
 
 .act-song img {
     height: 100%;
+    opacity: 0.5;
 }
 
 .left-icons {
@@ -519,12 +537,28 @@ footer {
     cursor: pointer;
 }
 
+#heart {
+    animation:pulse 1s linear 0s infinite normal;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% { 
+        transform: scale(1.2); 
+    }
+    100% {transform: scale(1); 
+    }
+}
+
 #heart:hover {
     font-weight: 900;
 }
 
 #pause-button {
     position: absolute;
+    z-index: 33;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
@@ -542,6 +576,67 @@ footer {
     display:block;
     cursor: pointer;
 }
+.playing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    transform: translateX(-50%);
+  }
+  
+  .now.playing .bar {
+    display: inline-block;
+    position: relative;
+    margin-right: 1px;
+    width: 4px;
+    height: 1px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #32CD32, #fff347);
+    color: transparent;
+    animation-name: music-pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  .n-1 {
+    animation-delay: 0.5s;
+  }
+
+  .n-2 {
+    animation-delay: 1s;
+  }
+
+  .n-3 {
+    animation-delay: 1.8s;
+  }
+
+  @keyframes music-pulse {
+    0% {
+      height: 1px;
+      margin-top: 0;
+    }
+    10% {
+      height: 20px;
+      margin-top: -40px;
+    }
+    50% {
+      height: 10px;
+      margin-top: -20px;
+    }
+    60% {
+      height: 15px;
+      margin-top: -30px;
+    }
+    80% {
+      height: 30px;
+      margin-top: -60px;
+    }
+    100% {
+      height: 1px;
+      margin-top: 0;
+    }
+  }
+
 /* / Footer Sinistra */
 
 /* Player Centrale */
