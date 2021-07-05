@@ -105,6 +105,13 @@ main {
     color: white;
 }
 
+.playlist-create:focus,
+.playlist-create:focus .plus,
+.list .playlist-name:focus {
+    cursor: pointer;
+    color: white;
+}
+
 .playlist-create:hover .plus {
     background-color: white;
 }
@@ -198,49 +205,6 @@ main {
 }
 
 
-@media screen and (max-width: 600px) {
-    main .sidebar {
-        width: 50px;
-    }
-
-    main .main-content {
-        width: calc(100% - 50px);
-    }
-
-    .side-active {
-        border-left: none;
-    }
-
-    #logo, 
-    .option p,
-    .side-top h3,
-    .playlist-create,
-    .all-playlist,
-    .menage p,
-    .menage hr {
-        display: none;
-    }
-
-    .option {
-        display: inline-block;
-        padding: 5px 0;
-    }
-
-    .menu-side {
-        align-items: center;
-        position: absolute;
-        top: 40px;
-    }
-
-    #logo-small {
-        display: inline-block;
-    }
-    
-    .menage {
-        align-items: center;
-    }
-
-}
 
 /* /Menu laterale */
 
@@ -362,6 +326,7 @@ main {
     flex-wrap: wrap;
     width: 100%;
     margin: 35px 0;
+    padding: 0 20px;
 }
 
 .row h1 {
@@ -378,19 +343,24 @@ main {
 }
 
 .song {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-shrink: 0;
-    width: 200px;
-    margin: 0 20px;
+    width: calc((100% / 6) - 20px);
+    margin-right: 20px;
     text-align: center;
+    cursor: pointer;
 
 }
-.song img {
-    height: 200px;
+.img-song {
+    position: relative;
+    width: 100%;
     margin-bottom: 20px;
+}
+
+.img-song img {
+    width: 100%;
 }
 
 .song h3 {
@@ -410,28 +380,21 @@ main {
 
 #play-button {
     position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
     color: white;
-    width: 200px;
-    height: 200px;
-    line-height: 200px;
-    text-align: center;
-    vertical-align: middle;
     display: none;
 }
 
-.artist #play-button {
-    border-radius: 50%;
+.song:hover .img-song img {
+    opacity: 0.4;
 }
 
 .song:hover #play-button {
     display: block;
 }
-
-
 
 /* / Contenuto Principale */
 
@@ -473,7 +436,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 700px;
+    width: 40%;
     height: 100%;
 }
 
@@ -639,9 +602,8 @@ footer {
 }
 .footer-right .progression {
     display: flex;
-    width: 150px;
+    width: 80%;
     margin-top: 0px;
-    min-width: 100px;
 }
 
 .footer-right .bar {
@@ -656,7 +618,9 @@ footer {
 /* / Footer */
 
 /* Media Query */
-@media screen and (max-width: 700px) {
+
+
+@media (max-width: 700px) {
     main .sidebar {
         width: 50px;
     }
@@ -699,6 +663,8 @@ footer {
     }
 
 }
+
+
 /* / Media Query */
 /* Debug */
 .debug .wrapper {

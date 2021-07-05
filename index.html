@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserratdisplay=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserratdisplay=swap" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="img/favicon.ico"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <title>SpotifyWeb</title>
@@ -61,113 +62,130 @@
             <!-- Contenuto Principale -->
             <div class="main-content">
                 <div class="upgrade-bar">
-                        <a id="upgrade-btn" href="#">EFFETTUA L'UPGRADE</a>
+                    <a id="upgrade-btn" href="#">EFFETTUA L'UPGRADE</a>
                 </div>
                 <div class="main-wrap">
-                <div class="toolbar">
-                    <div class="tool-btn tool-active">
-                        <a href="#">IN EVIDENZA</a>
-                        <div class="greenbottom"></div>                     
-                    </div>
-                    <div class="tool-btn">
-                        <a href="#">PODCAST</a>
-                        <div class="greenbottom"></div>                     
-                    </div>
-                    <div class="tool-btn">
-                        <a href="#">CLASSIFICHE</a>
-                        <div class="greenbottom"></div>                     
-                    </div>
-                    <div class="tool-btn">
-                        <a href="#">GENERI E MOOD</a>
-                        <div class="greenbottom"></div>                     
-                    </div>
-                    <div class="tool-btn">
-                        <a href="#">NUOVE USCITE</a>
-                        <div class="greenbottom"></div>                     
-                    </div>
-                    <div class="tool-btn">
-                        <a href="#">SCOPRI</a>
-                        <div class="greenbottom"></div>                     
-                    </div>
-                </div>
-
-                <div class="row">
-                    <h1>Recently played</h1>
-                    <div class="box">
-                        <div class="song">
-                            <img src="img/metal_lifting.jpg" alt="Heavy Metal cover">
-                            <i id="play-button" class="far fa-play-circle play"></i>
-                            <h3>Heavy Metal</h3>
-                            <p>Subtitle</p>
+                    <div class="toolbar">
+                        <div class="tool-btn tool-active">
+                            <a href="#">IN EVIDENZA</a>
+                            <div class="greenbottom"></div>                     
                         </div>
-                        <div class="song">
-                            <img src="img/stranger.jpeg" alt="Stranger Things cover">
-                            <i id="play-button" class="far fa-play-circle play"></i>
-                            <h3>Stranger Things, Vol.1 (a Netflix Original Series Sondtrack)</h3>
-                            <p>Kyle Dixon & Michael Stein</p>
+                        <div class="tool-btn">
+                            <a href="#">PODCAST</a>
+                            <div class="greenbottom"></div>                     
                         </div>
-                        <div class="song">
-                            <img src="img/aquietplace.jpeg" alt="A Quiet Place cover">
-                            <i id="play-button" class="far fa-play-circle play"></i>
-                            <h3>A quiet place</h3>
-                            <p>Subtitle</p>
+                        <div class="tool-btn">
+                            <a href="#">CLASSIFICHE</a>
+                            <div class="greenbottom"></div>                     
                         </div>
-                        <div class="song">
-                            <img src="img/split.jpeg" alt="Split cover">
-                            <i id="play-button" class="far fa-play-circle play"></i>
-                            <h3>Split</h3>
-                            <p>Subtitle</p>
+                        <div class="tool-btn">
+                            <a href="#">GENERI E MOOD</a>
+                            <div class="greenbottom"></div>                     
                         </div>
-                        <div class="song">
-                            <img src="img/cure.jpeg" alt="A Cure fon Wellness cover">
-                            <i id="play-button" class="far fa-play-circle play"></i>
-                            <h3>A cure for wellness</h3>
-                            <p>Subtitle</p>
+                        <div class="tool-btn">
+                            <a href="#">NUOVE USCITE</a>
+                            <div class="greenbottom"></div>                     
                         </div>
-                        <div class="song">
-                            <img src="img/sinister.jpeg" alt="Sinister cover">
-                            <i id="play-button" class="far fa-play-circle play"></i>
-                            <h3>Sinister</h3>
-                            <p>Subtitle</p>
+                        <div class="tool-btn">
+                            <a href="#">SCOPRI</a>
+                            <div class="greenbottom"></div>                     
                         </div>
-
-                        
-                        <div class="row">
-                            <h1>Creato Per John Doe</h1>
-                            <p id="desc">Più ascolti, più accurati saranno i suggerimenti.</p>
-                            <div class="box">
-                                <div class="song">
+                    </div>
+                    <div class="row">
+                        <h1>Recently played</h1>
+                        <div class="box">
+                            <div class="song">
+                                <div class="img-song">
+                                    <img src="img/metal_lifting.jpg" alt="Heavy Metal cover">
+                                    <i id="play-button" class="far fa-play-circle play"></i>
+                                </div>
+                                <h3>Heavy Metal</h3>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="song">
+                                <div class="img-song">
+                                    <img src="img/stranger.jpeg" alt="Stranger Things cover">
+                                    <i id="play-button" class="far fa-play-circle play"></i>
+                                </div>
+                                <h3>Stranger Things, Vol.1 (a Netflix Original Series Sondtrack)</h3>
+                                <p>Kyle Dixon & Michael Stein</p>
+                            </div>
+                            <div class="song">
+                                <div class="img-song">
+                                    <img src="img/aquietplace.jpeg" alt="A Quiet Place cover">
+                                    <i id="play-button" class="far fa-play-circle play"></i>
+                                </div>
+                                <h3>A quiet place</h3>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="song">
+                                <div class="img-song">
+                                    <img src="img/split.jpeg" alt="Split cover">
+                                    <i id="play-button" class="far fa-play-circle play"></i>
+                                </div>
+                                <h3>Split</h3>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="song">
+                                <div class="img-song">
+                                    <img src="img/cure.jpeg" alt="A Cure fon Wellness cover">
+                                    <i id="play-button" class="far fa-play-circle play"></i>
+                                </div>
+                                <h3>A cure for wellness</h3>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="song">
+                                <div class="img-song">
+                                    <img src="img/sinister.jpeg" alt="Sinister cover">
+                                    <i id="play-button" class="far fa-play-circle play"></i>
+                                </div>
+                                <h3>Sinister</h3>
+                                <p>Subtitle</p>
+                            </div>    
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <h1>Creato Per John Doe</h1>
+                        <p id="desc">Più ascolti, più accurati saranno i suggerimenti.</p>
+                        <div class="box">
+                            <div class="song">
+                                <div class="img-song">
                                     <img src="img/radar.jpeg" alt="Release Radar cover">
                                     <i id="play-button" class="far fa-play-circle play"></i>
-                                    <h3>Release Radar</h3>
                                 </div>
-                                <div class="song">
+                                <h3>Release Radar</h3>
+                            </div>
+                            <div class="song">
+                                <div class="img-song">
                                     <img src="img/mixdaily.jpeg" alt="Daily Mix cover">
                                     <i id="play-button" class="far fa-play-circle play"></i>
-                                    <h3>Daily Mix 1</h3>
                                 </div>
+                                <h3>Daily Mix 1</h3>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <h1>Artisti più popolari</h1>
-                            <p id="desc">Più ascolti, più accurati saranno i suggerimenti.</p>
-                            <div class="box">
-                                <div class="song artist">
+                    </div>
+                    
+                    <div class="row">
+                        <h1>Artisti più popolari</h1>
+                        <p id="desc">Più ascolti, più accurati saranno i suggerimenti.</p>
+                        <div class="box">
+                            <div class="song artist">
+                                <div class="img-song">
                                     <img src="img/youg.jpeg" alt="Lana Del Rey cover">
                                     <i id="play-button" class="far fa-play-circle play"></i>
-                                    <h3>Lana Del Rey</h3>
                                 </div>
-                                <div class="song artist">
+                                <h3>Lana Del Rey</h3>
+                            </div>
+                            <div class="song artist">
+                                <div class="img-song">
                                     <img src="img/einaudi.jpeg" alt="Ludovico Enaudi cover">
                                     <i id="play-button" class="far fa-play-circle play"></i>
-                                    <h3>Ludovico Enaudi</h3>
                                 </div>
+                                <h3>Ludovico Enaudi</h3>
                             </div>
                         </div>
-
                     </div>
-                </div>
                 </div>
             </div>
             <!-- / Contenuto Principale -->
