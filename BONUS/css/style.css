@@ -1,0 +1,769 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Common */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.sidebar,
+.main-content {
+    float: left;
+}
+/* / Common */
+
+/* Main */
+
+main {
+    height: calc(100% - 100px);
+    width: 100%;
+    overflow-y: hidden;
+}
+/* Menu laterale */
+.sidebar {
+    position: relative;
+    width: 250px;
+    height: 100%;
+    min-height: 480px;
+    background-color: black;
+    font-size: 16px;
+    font-weight: 600;
+    color: #a3a3a3;
+}
+
+.sidebar h3 {
+    color: white;
+}
+
+#logo {
+    height: 50px;
+    margin: 20px;
+}
+
+.menu-side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 15px;
+    border-left: 3px solid transparent;
+}
+
+.option img {
+    height: 30px;
+    margin-right: 5px;
+    filter: contrast(30%);
+}
+
+.side-active {
+    color: white;
+    border-left: 3px solid #adff2f;
+}
+.side-active img {
+    filter: none;
+}
+
+.option:hover {
+    cursor: pointer;
+    border-left: 3px solid #adff2f;
+}
+
+.side-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: calc(100% - 90px);
+}
+
+.playlist-create:hover,
+.list .playlist-name:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.playlist-create:focus,
+.playlist-create:focus .plus,
+.list .playlist-name:focus {
+    cursor: pointer;
+    color: white;
+}
+
+.playlist-create:hover .plus {
+    background-color: white;
+}
+
+.all-playlist {
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.playlist-create {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.playlist-create .plus {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 22px;
+    font-weight: 900;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #a3a3a3;
+    margin-right: 5px;
+}
+
+.list {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.playlist-name {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.menage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 90px;
+    padding: 0 20px;
+}
+
+.menage-option {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.menage-option:first-child img {
+    height: 25px;
+    filter: contrast(30%);
+    margin-right: 5px;
+}
+
+.menage-option:last-child img {
+    height: 30px;
+    background-color: #a3a3a3;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.menage-option:last-child p {
+    color: white;
+}
+
+.menage-option:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.menage-option:first-child:hover img {
+    filter: none;
+}
+
+#logo-small {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30px;
+    display: none;
+}
+
+/* /Menu laterale */
+
+/* Contenuto Principale */
+
+.main-content {
+    position: relative;
+    width: calc(100% - 250px);
+    height: 100%;
+}
+
+/* Barra Upgrade */
+.upgrade-bar {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#upgrade-btn {
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    padding: 15px 40px;
+    border: 2px solid white;
+    border-radius: 30px;
+    margin: 0 20px;
+}
+
+#upgrade-btn:hover {
+    transform: scale(1.1);
+}
+/* / Barr Upgrade */
+
+.main-wrap {
+    width: 100%;
+    height: 100%;
+    padding-top: 90px;
+    overflow-y: auto;
+    background-color:#141922;
+}
+
+.main-wrap::-webkit-scrollbar-track {
+    border: 1px solid #000;
+    padding: 2px 0;
+    background-color: #404040;
+  }
+  
+  .main-wrap::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .main-wrap::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #a3a3a3;
+    border: 1px solid #000;
+  }
+
+.toolbar {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 10px auto;
+}
+
+.tool-btn {
+    position: relative;
+    padding: 10px 0;
+}
+
+.toolbar a {
+    text-decoration: none;
+    color: #a3a3a3;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.greenbottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 50%;
+    background-color: limegreen;
+    display: none;
+}
+
+.tool-active .greenbottom {
+    display: block;
+}
+
+.tool-active a {
+    color: white;
+}
+
+.tool-btn:hover a {
+    color: white;
+}
+.tool-btn:hover .greenbottom {
+    display: block;
+}
+
+.row {
+    width: 100%;
+    padding: 20px 0px;
+
+}
+
+.box {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 35px 0;
+    padding: 0 20px;
+}
+
+.row h1 {
+    color: white;
+    margin: 0 20px;
+}
+
+#desc {
+    color: gray;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: 5px;    
+}
+
+.song {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: calc((100% / 6) - 20px);
+    margin-right: 20px;
+    text-align: center;
+    cursor: pointer;
+
+}
+.img-song {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.img-song img {
+    width: 100%;
+}
+
+.song h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.song p {
+    color: gray;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.artist img {
+    border-radius: 50%;
+}
+
+#play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    display: none;
+}
+
+.song:hover .img-song img {
+    opacity: 0.4;
+}
+
+.song:hover #play-button {
+    display: block;
+}
+
+/* / Contenuto Principale */
+
+/* Footer */
+
+/* Footer Sinistra */
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #282828;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;    
+}
+
+.footer-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.footer-right {
+    display: flex;
+    justify-self: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+    width: 250px;
+    height: 100%;
+}
+
+.footer-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+}
+
+.footer-song {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    color: #a3a3a3;
+}
+
+.song-info h3 {
+    font-size: 16px;
+    color: white;
+}
+
+.song-info p {
+    font-size: 14px;
+}
+
+.song-info p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
+}
+
+.act-song {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.act-song img {
+    height: 100%;
+}
+
+.left-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-icons i {
+    font-size: 20px;
+    margin: 0 5px;
+    color: #a3a3a3;
+}
+
+.left-icons i:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#heart:hover {
+    font-weight: 900;
+}
+
+#pause-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    display: none;
+}
+
+.act-song:hover #pause-button {
+    display:block;
+    cursor: pointer;
+}
+/* / Footer Sinistra */
+
+/* Player Centrale */
+.player {
+    display: flex;
+    text-align: center;
+    color: white;
+    align-items: center;
+}
+
+.player i {
+    font-size: 16px;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+.player .play {
+    font-size: 35px;
+}
+
+.player .play:hover {
+    transform: scale(1.1);
+}
+
+.progression {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.progression .time {
+    color: white;
+    margin: 0px 10px;
+    font-size: 10px;
+}
+
+.footer-player .bar {
+    height: 5px;
+    width: 80%;
+    min-width: 150px;
+    background-color: #c1c1c1;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.loaded {
+    width: 20%;
+    position: absolute;
+    left: 0;
+    height: 5px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.bar:hover .loaded {
+    background-color: limegreen;
+}
+
+.circle {
+    display: none;
+    position: absolute;
+    left: 18%;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transform: translate(0%, -50%);
+    background-color: white;
+}
+
+.bar:hover .circle {
+    display: block;
+}
+/* / Player Centrale */
+
+/* Footer Destra */
+.footer-right i {
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+}
+.footer-right .progression {
+    display: flex;
+    width: 80%;
+    margin-top: 0px;
+}
+
+.footer-right .bar {
+    position: relative;
+    width: 80%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #c1c1c1;
+    cursor: pointer;
+}
+/* / Footer Destra */
+
+/* / Footer */
+
+/* Media Query */
+
+@media (max-width: 1120px) {
+    .song {
+        width: calc((100% / 4) - 20px);
+    }
+}
+
+@media (max-width: 800px) {    
+    .song {
+        width: calc((100% / 2) - 20px);
+    }
+}
+
+@media (max-width: 700px) {
+    main .sidebar {
+        width: 50px;
+    }
+
+    main .main-content {
+        width: calc(100% - 50px);
+    }
+
+    .side-active {
+        border-left: none;
+    }
+
+    #logo, 
+    .option p,
+    .side-top h3,
+    .playlist-create,
+    .all-playlist,
+    .menage p,
+    .menage hr {
+        display: none;
+    }
+
+    .option {
+        display: inline-block;
+        padding: 5px 0;
+    }
+
+    .menu-side {
+        align-items: center;
+        position: absolute;
+        top: 40px;
+    }
+
+    #logo-small {
+        display: inline-block;
+    }
+    
+    .menage {
+        align-items: center;
+    }
+
+}
+
+/* BONUS MEDIA QUERY (Scomparsa barra "Upgrade" */
+@media (max-height: 550px) {
+    .upgrade-bar {
+        display: none;
+    }
+
+    .main-wrap {
+        padding-top: 10px;
+    }
+}
+
+/* / BONUS MEDIA QUERY */
+
+
+/* / Media Query */
+/* Debug */
+.debug .wrapper {
+    background-color: lightblue;
+}
+
+/* Contenuto Principale */
+.debug .wrapper .main-content {
+    background-color: lightgreen;
+    border: 1px solid green;
+}
+
+.debug .main-wrap {
+    background-color: burlywood;
+}
+
+.debug .upgrade-bar {
+    background-color: cadetblue;
+}
+
+.debug .toolbar {
+    background-color: white;
+}
+
+.debug .box {
+    background-color: red;
+}
+/* / Contenuto Principale */
+
+/* Sidebar */
+.debug .wrapper .sidebar {
+    border: 1px solid black;
+}
+
+.debug .wrapper .menu-side {
+    /* background-color: lightskyblue; */
+    border: 1px solid blue;
+}
+
+.debug .wrapper .menu-side .option {
+    border: 1px solid white;
+}
+
+.debug .wrapper .all-playlist {
+    background-color: greenyellow;
+    border: 1px solid yellow;
+}
+
+.debug .wrapper .menage {
+    background-color: lightsteelblue;
+    border: 1px solid yellow;
+}
+/* / Sidebar */
+
+/* Footer */
+.debug .wrapper footer {
+    background-color: lightcoral;
+}
+
+.debug .main-footer {
+    background-color: thistle;
+}
+
+.debug .footer-left {
+    background-color: turquoise;
+}
+
+.debug .footer-player {
+    background-color: yellowgreen;
+}
+
+.debug .footer-right {
+    background-color: lightskyblue;
+}
+/* / Footer */
+
+/* / Debug */
