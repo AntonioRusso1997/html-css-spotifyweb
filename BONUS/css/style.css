@@ -234,11 +234,38 @@ main {
     border: 2px solid white;
     border-radius: 30px;
     margin: 0 20px;
+    animation:Sfondo-btn 2s alternate infinite;
+}
+
+@keyframes Sfondo-btn {
+	0% {
+		background-color: #32CD32;
+	}
+	50% {
+		background-color: #96ff33;
+        color: black;
+	}
+	100% {
+		background-color: #32CD32;
+	}
 }
 
 #upgrade-btn:hover {
     transform: scale(1.1);
+    animation:jump 1s ease 0s infinite normal;
+    background-color:#32CD32;
+    
 }
+
+@keyframes jump {
+    0%{ transform:translateY(0); }
+    20%{ transform:translateY(0); }
+    40%{ transform:translateY(-20px); }
+    50%{ transform:translateY(0); }
+    60%{ transform:translateY(-10px); }
+    80%{ transform:translateY(0); }
+    100%{ transform:translateY(0); }
+    }
 /* / Barr Upgrade */
 
 .main-wrap {
