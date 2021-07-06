@@ -21,15 +21,18 @@ body {
     display: table;
 }
 
-.sidebar,
+/* .sidebar,
 .main-content {
     float: left;
-}
+} */
+
 /* / Common */
 
 /* Main */
 
 main {
+    display: flex;
+    justify-content: flex-end;
     height: calc(100% - 100px);
     width: 100%;
     overflow-y: hidden;
@@ -234,21 +237,7 @@ main {
     border: 2px solid white;
     border-radius: 30px;
     margin: 0 20px;
-    /* animation:Sfondo-btn 2s alternate infinite; */
 }
-/* 
-@keyframes Sfondo-btn {
-	0% {
-		background-color: #32CD32;
-	}
-	50% {
-		background-color: #96ff33;
-        color: black;
-	}
-	100% {
-		background-color: #32CD32;
-	}
-} */
 
 #upgrade-btn {
     animation:jump-and-bg 2s ease 0s infinite normal;
